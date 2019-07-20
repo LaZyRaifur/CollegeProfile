@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/chairman"
+        android:title="Honorable Chairman" />
+    <item
+        android:id="@+id/principal"
+        android:title="Honorable Principal" />
+    <item
+        android:id="@+id/controller"
+        android:title="Exam Controller" />
+    <item
+        android:id="@+id/administration_officer"
+        android:title="Other Administrative Officer" />
+    <item
+        android:id="@+id/departmentContactNumber"
+        android:title="Departmental Contact Number" />
+
+</menu>

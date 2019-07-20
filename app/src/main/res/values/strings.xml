@@ -21,8 +21,15 @@
 
     <!--label name-->
     <string name="facility">FACILITY</string>
-    <string name="goal">ACHIEVEMENT</string>
+    <string name="administration">ADMINISTRATION</string>
     <string name="gallery">GALLERY</string>
-    <string name="notification">NOTIFICATION</string>
-    <string name="contactUs">Contact Us</string>
+    <string name="notification">ACADEMIC</string>
+    <string name="explore">MORE.......</string>
+    <string name="contactUs">Address: 62, Nazimuddin Road, Dhaka-1100
+Telephone: +88 02-57300204
+
+Mobile: +88 01771242644, 01819023177
+
+Email: info@sbpgc.edu.bd
+Web: www.sbpgc.edu.bd</string>
 </resources>

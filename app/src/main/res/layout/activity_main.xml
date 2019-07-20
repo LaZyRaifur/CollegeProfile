@@ -18,6 +18,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="15sp"
+        android:textColor="@color/cardview_dark_background"
         android:text="Shaikh Burhanuddin Post Graduate College"
         android:layout_gravity="center"
         android:gravity="center"
@@ -51,7 +52,7 @@
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/bankcardId"
+            android:id="@+id/FacultyId"
             android:layout_width="160dp"
             android:layout_height="140dp"
             android:layout_margin="10dp">
@@ -90,6 +91,7 @@
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
+            android:id="@+id/administrationId"
             android:layout_width="160dp"
             android:layout_height="140dp"
             android:layout_margin="10dp">
@@ -101,15 +103,15 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/cerclebackgroundpink"
-                    android:src="@drawable/cup"
+
+                    android:src="@drawable/administration"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="@string/goal"/>
+                    android:text="@string/administration" />
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -138,6 +140,7 @@
             android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="140dp"
+            android:id="@+id/galleryId"
             android:layout_margin="10dp">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -172,6 +175,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/academicId"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="160dp"
@@ -189,7 +193,7 @@
                     android:layout_height="64dp"
                     android:background="@drawable/cerclebackgroundyello"
                     android:padding="10dp"
-                    android:src="@drawable/schoolbell" />
+                    android:src="@drawable/student" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -227,6 +231,7 @@
             android:clickable="true"
             android:layout_width="340dp"
             android:layout_height="140dp"
+            android:id="@+id/moreId"
             android:layout_margin="10dp">
             <LinearLayout
 
@@ -244,7 +249,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="@string/contactUs"/>
+                    android:text="@string/explore" />
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
