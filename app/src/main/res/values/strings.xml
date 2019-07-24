@@ -18,6 +18,10 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="library">Library</string>
+    <string name="laboratory">Laboratory</string>
+    <string name="sports">Sports</string>
+    <string name="it_club">IT Club</string>
 
     <!--label name-->
     <string name="facility">FACILITY</string>

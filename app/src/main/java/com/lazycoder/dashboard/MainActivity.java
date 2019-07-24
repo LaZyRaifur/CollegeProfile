@@ -10,11 +10,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -30,7 +27,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity {
-    CardView faculty, gallery, administration, academic, More;
+    CardView facility, gallery, administration, academic, More;
     Intent i;
     LinearLayout ll;
 
@@ -56,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ll = (LinearLayout) findViewById(R.id.ll);
 
-        faculty = (CardView) findViewById(R.id.FacultyId);
+        facility = (CardView) findViewById(R.id.FacilityId);
         academic = (CardView) findViewById(R.id.academicId);
         administration = (CardView) findViewById(R.id.administrationId);
         gallery = (CardView) findViewById(R.id.galleryId);
@@ -73,6 +70,17 @@ public class MainActivity extends AppCompatActivity {
 ////        });
 
 
+        //////////////Facility//////////////////
+        facility.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Facility.class);
+                startActivity(intent);
+                return;
+            }
+        });
+
+
         gallery = (CardView) findViewById(R.id.galleryId);
         i = new Intent(this, GalleryActivity.class);
         gallery.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +91,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ////academic activities////////////
+        academic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Creating the instance of PopupMenu
+                PopupMenu popup = new PopupMenu(MainActivity.this, academic);
+
+                //Inflating the Popup using xml file
+                popup.getMenuInflater().inflate(R.menu.academic, popup.getMenu());
+
+                ///onMenuItemClickListener//////////////
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.admission:
+                                break;
+                            case R.id.result:
+                                break;
+                        }
+
+                        return true;
+                    }
+                });
+                popup.show();
+            }
+        });
 
         More.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -173,7 +208,9 @@ public class MainActivity extends AppCompatActivity {
 
                 popup.show();//showing more menu
             }
-        });//closing the setOnClickListener method
+        });
+
+        //closing the setOnClickListener method
 
 
         MarqueeView marqueeView = findViewById(R.id.marquee);

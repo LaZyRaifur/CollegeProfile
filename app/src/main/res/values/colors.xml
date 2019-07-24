@@ -13,4 +13,7 @@
     <color name="pink">#fe104d</color>
 
     <color name="black_overlay">#66000000</color>
+    <color name="graylight">#607D8B</color>
+    <color name="startblue">#2196F3</color>
+    <color name="endblue">#03A9F4</color>
 </resources>
