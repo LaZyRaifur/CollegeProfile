@@ -6,23 +6,21 @@
     android:layout_height="match_parent"
     android:background="@color/endblue"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="300dp">
+    tools:context=".Facility">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:background="#FFF"
+            android:layout_height="wrap_content"
+            android:background="#FFFF"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="150dp"
+                android:layout_width="match_parent"
+
+                android:layout_margin="10dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="45dp"
+
                 android:src="@drawable/coverphoto" />
             <!--<TextView-->
             <!--android:layout_marginTop="10dp"-->
@@ -35,10 +33,11 @@
             <!--android:textSize="18sp"/>-->
             <com.sunfusheng.marqueeview.MarqueeView
                 android:id="@+id/marquee"
+
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="#FFFFFF"
+                android:layout_gravity="center|bottom"
+
                 android:ellipsize="marquee"
                 android:marqueeRepeatLimit="marquee_forever"
                 android:scrollHorizontally="true"
@@ -48,12 +47,14 @@
                 app:mvGravity="center"
                 app:mvInterval="1500"
                 app:mvSingleLine="true"
+
                 app:mvTextColor="@android:color/black"
                 app:mvTextSize="14sp" />
         </LinearLayout>
-    </RelativeLayout>
 
     <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">

@@ -51,13 +51,13 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        ll = (LinearLayout) findViewById(R.id.ll);
+        ll = findViewById(R.id.ll);
 
-        facility = (CardView) findViewById(R.id.FacilityId);
-        academic = (CardView) findViewById(R.id.academicId);
-        administration = (CardView) findViewById(R.id.administrationId);
-        gallery = (CardView) findViewById(R.id.galleryId);
-        More = (CardView) findViewById(R.id.moreId);
+        facility = findViewById(R.id.FacilityId);
+        academic = findViewById(R.id.academicId);
+        administration = findViewById(R.id.administrationId);
+        gallery = findViewById(R.id.galleryId);
+        More = findViewById(R.id.moreId);
 
 
 //        mycard = (CardView) findViewById(R.id.bankcardId);
@@ -76,12 +76,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Facility.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
                 return;
             }
         });
 
 
-        gallery = (CardView) findViewById(R.id.galleryId);
+        gallery = findViewById(R.id.galleryId);
         i = new Intent(this, GalleryActivity.class);
         gallery.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -157,6 +158,12 @@ public class MainActivity extends AppCompatActivity {
                                 showDialog(MainActivity.this, "Can not find any Journals from the website!!!");
                                 break;
 
+                            case R.id.notifications:
+                                Intent i = new Intent(MainActivity.this, Notifications.class);
+                                startActivity(i);
+
+                                break;
+
                         }
 
 
@@ -190,13 +197,25 @@ public class MainActivity extends AppCompatActivity {
                                         "Department of Soil, Water & Environment , DU");
                                 break;
                             case R.id.principal:
+                                Intent intent = new Intent(MainActivity.this, GalleryActivity.class);
+                                startActivity(intent);
+
 //
                                 break;
                             case R.id.controller:
+                                Intent intent1 = new Intent(MainActivity.this, GalleryActivity.class);
+                                startActivity(intent1);
+
                                 break;
                             case R.id.administration_officer:
+                                Intent intent2 = new Intent(MainActivity.this, GalleryActivity.class);
+                                startActivity(intent2);
+
                                 break;
                             case R.id.departmentContactNumber:
+                                Intent intent3 = new Intent(MainActivity.this, GalleryActivity.class);
+                                startActivity(intent3);
+
                                 break;
 
                         }
@@ -248,10 +267,10 @@ public class MainActivity extends AppCompatActivity {
         dialog.setCancelable(false);
         dialog.setContentView(R.layout.chairman);
 
-        TextView text = (TextView) dialog.findViewById(R.id.text_dialog);
+        TextView text = dialog.findViewById(R.id.text_dialog);
         text.setText(msg);
 
-        Button dialogButton1 = (Button) dialog.findViewById(R.id.btn1);
+        Button dialogButton1 = dialog.findViewById(R.id.btn1);
         dialogButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -259,7 +278,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button dialogButton2 = (Button) dialog.findViewById(R.id.btn2);
+        Button dialogButton2 = dialog.findViewById(R.id.btn2);
         dialogButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -278,10 +297,10 @@ public class MainActivity extends AppCompatActivity {
         dialog.setCancelable(false);
         dialog.setContentView(R.layout.contactus);
 
-        TextView text = (TextView) dialog.findViewById(R.id.text_dialog);
+        TextView text = dialog.findViewById(R.id.text_dialog);
         text.setText(msg);
 
-        Button dialogButton1 = (Button) dialog.findViewById(R.id.btn1);
+        Button dialogButton1 = dialog.findViewById(R.id.btn1);
         dialogButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -289,7 +308,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button dialogButton2 = (Button) dialog.findViewById(R.id.btn2);
+        Button dialogButton2 = dialog.findViewById(R.id.btn2);
         dialogButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -308,10 +327,10 @@ public class MainActivity extends AppCompatActivity {
         dialog.setCancelable(false);
         dialog.setContentView(R.layout.journals);
 
-        TextView text = (TextView) dialog.findViewById(R.id.text_dialog);
+        TextView text = dialog.findViewById(R.id.text_dialog);
         text.setText(msg);
 
-        Button dialogButton1 = (Button) dialog.findViewById(R.id.btn1);
+        Button dialogButton1 = dialog.findViewById(R.id.btn1);
         dialogButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -319,7 +338,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button dialogButton2 = (Button) dialog.findViewById(R.id.btn2);
+        Button dialogButton2 = dialog.findViewById(R.id.btn2);
         dialogButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

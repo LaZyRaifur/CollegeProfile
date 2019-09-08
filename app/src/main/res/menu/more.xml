@@ -10,6 +10,9 @@
         android:title="Journals" />
     <item
         android:id="@+id/contactUs"
-        android:title="contact Us" />
+        android:title="Contact Us" />
+    <item
+        android:id="@+id/notifications"
+        android:title="Notification" />
 
 </menu>

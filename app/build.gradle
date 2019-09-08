@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     defaultConfig {
         applicationId "com.lazycoder.dashboard"
-        minSdkVersion 21
+        minSdkVersion 22
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -34,6 +34,9 @@ dependencies {
 
     //Add library for progressbar
     implementation 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
+    //Add library for different purposes
+    //implementation 'com.jakewharton:butterknife:10.1.0'
+    //annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
 
 
 }

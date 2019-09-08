@@ -1,10 +1,13 @@
 package com.lazycoder.dashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +21,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Facility extends AppCompatActivity {
 
+    CardView sports, library, it, labrotary;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -36,7 +40,50 @@ public class Facility extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_facility);
 
+        sports = findViewById(R.id.sports);
+        library = findViewById(R.id.library);
+        it = findViewById(R.id.itClub);
+        labrotary = findViewById(R.id.laboratory);
 
+
+        sports.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sports = new Intent(Facility.this, GalleryActivity.class);
+                startActivity(sports);
+
+            }
+        });
+
+
+        it.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sports = new Intent(Facility.this, GalleryActivity.class);
+                startActivity(sports);
+
+            }
+        });
+
+
+        labrotary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sports = new Intent(Facility.this, GalleryActivity.class);
+                startActivity(sports);
+
+            }
+        });
+
+
+        library.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sports = new Intent(Facility.this, GalleryActivity.class);
+                startActivity(sports);
+
+            }
+        });
         ////marquee////////////
         MarqueeView marqueeView = findViewById(R.id.marquee);
 
